@@ -161,8 +161,7 @@ cython_debug/
 
 
 /venv/
-#/anki/db.sqlite3
+/db.sqlite3
 /.idea/.gitignore
 ./.idea
 .idea
-/db.sqlite3
