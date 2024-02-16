@@ -15,3 +15,4 @@ def get_card_by_id(request, card_id):
 
 def get_category_by_name(request, slug):
     return HttpResponse(f'Категория {slug}')
+
