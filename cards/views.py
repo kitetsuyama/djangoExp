@@ -2,13 +2,22 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.context_processors import request
 
+info = {
+    'users_count': 100500,
+    'cards_count': 200600,
+    'menu': ['Главная', 'О проекте', 'Каталог']
+}
+
+
+
+
 
 def index(request):
-    return render(request, 'cards/main.html')
+    return render(request, 'cards/main.html', info)
 
 
 def about(request):
-    return render(request, 'cards/about.html')
+    return render(request, 'cards/about.html', info)  # context=about_info
 
 
 def catalog(request):
