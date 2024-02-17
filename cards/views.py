@@ -1,17 +1,31 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+from django.template.context_processors import request
 
 
 def index(request):
-    return HttpResponse('Привет, мир!')
+    return render(request, 'cards/main.html')
+
+
+def about(request):
+    return render(request, 'cards/about.html')
 
 
 def catalog(request):
-    return HttpResponse('Каталог карточек')
+    return render(request, 'cards/catalog.html')
 
 
-def get_card_by_id(request, card_id):
-    return HttpResponse(f'Карточка {card_id}')
+def get_categories(request):
+    return HttpResponse('All categories')
 
 
-def get_category_by_name(request, slug):
-    return HttpResponse(f'Категория {slug}')
+def get_cards_by_category(request, slug):
+    return HttpResponse(f'Cards by category {slug}')
+
+
+def get_cards_by_tag(request, slug):
+    return HttpResponse(f'Cards by tag {slug}')
+
+
+def get_detail_card_by_id(request, card_id):
+    return HttpResponse(f'Detail card by id {card_id}')
