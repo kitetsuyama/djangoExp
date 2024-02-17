@@ -12,17 +12,17 @@
 <body>
 <nav>
     <ul>
-    {% for title in menu %}
+        {% for title in menu %}
         <li {% if forloop.first %}
             class="green"
             {% endif %}>
             {{ title }}
         </li>
-        {% if not forloop.last %}<hr>{% endif %}
+         {% if not forloop.last %}<hr>{% endif %}
     {% endfor %}
     </ul>
 </nav>
-    <h1>Первый шаблон</h1>
-    <p>Содержимое страницы</p>
+<h1>Главная страница</h1>
+<p>Содержимое страницы</p>
 </body>
 </html>
