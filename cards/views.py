@@ -64,6 +64,7 @@ def get_categories(request):
     """
     Возвращает все категории для представления в каталоге
     """
+    # Проверка работы базового шаблона
     return render(request, 'base.html',)
 
 
